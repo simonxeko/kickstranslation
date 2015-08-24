@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "icons": { "16": "icon.png",
+           "48": "icon.png",
+          "128": "icon.png" },
+  "name": "Langfree for Kickstarter",
+  "description": "Unofficial Multilanguage Support for Kickstarter, just to help international Kickstarterer users. 非官方的擴充套件，讓Kickstarter能夠支援多國語言。",
+  "version": "1.1.3",
+  "content_scripts": [
+    {
+      "matches": ["https://www.kickstarter.com/*","https://www.amazon.com/*"],
+      "css": ["mystyle.css"],
+      "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+      "js": ["ksch.js"],
+      "run_at": "document_end"
+    }
+  ]
+
+}
